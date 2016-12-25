@@ -1,0 +1,17 @@
+{{ "<!-- Contact section -->" | safeHTML }}
+<section class="alt-section section-contact">
+    {{ with .Site.Params.contact.title }}<h2 id="contact">{{ . }}</h2>{{ end }}
+    <div class="social-links">
+        {{ range .Site.Params.contact.social }}
+        <a href="{{ .link }}" class="icon-{{ .icon }}"></a>
+        {{ end }}
+    </div>
+    <div>
+	    <strong><a href="tel:+34653284549">Tel. 653 28 45 49</a></strong>
+    </div>
+    <div>
+	    <a href="#form-title">{{ .Site.Params.email }}</a>
+    </div>
+    <br>
+    <hr class="bar">
+</section>

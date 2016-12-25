@@ -1,0 +1,42 @@
+{{ "<!-- Clients section -->" | safeHTML }}
+<section class="section-clients">
+    {{ with .Site.Data.clients.title }}<h2 id="clients">{{ . }}</h2>{{ end }}
+
+    <div class="clients-mobile-nav">
+    {{ range $i, $e := .Site.Data.clients.list }}
+	    {{ if eq $i 0 }}
+	    <span class="active-client"></span>
+	    {{ else }}
+	    <span></span>
+	    {{ end }}
+    {{ end }}
+    </div>
+
+    <div class="clients-belt">
+    {{ range $i, $e := .Site.Data.clients.list }}
+    <div class="client-unit {{ if eq $i 0 }}active-client{{ end }}">   <!-- CONDITIONAL CSS CLASS -->
+        <a href="{{ .empresa_link }}"><figure class="client-face">
+            <img src="/img/proj/150-{{ .avatar }}.jpg" alt="client-face">
+            <figcaption>
+                <strong class="client-name">{{ .name }}</strong>
+                <em class="client-title">{{ .title }}</em>
+		<div>
+		<strong class="client-company">{{ .empresa }}</strong>
+		</div>
+            </figcaption>
+		</figure></a>
+        <div class="client-content">
+            {{ .quote | markdownify }}
+        </div>
+    </div>
+    {{ end }}
+	</div>
+
+    <div class="client-controls">
+        <div class="client-control-next">{{ partial "icons/icon-next.html" . }}</div>
+        <div class="client-control-prev">{{ partial "icons/icon-prev.html" . }}</div>
+    </div>
+
+
+</section>
+
