@@ -58,21 +58,21 @@ theme = "artists"
 		#	icon = "dribbble"
 		#	link = "//dribbble.com/travisneilson"
 
-		#[[params.contact.social]]
-		#	icon = "behance"
-		#	link = "//www.behance.net/travisneilson"
+		[[params.contact.social]]
+			icon = "instagram"
+			link = "https://www.instagram.com/ebanisteria_cordon/"
 
-		#[[params.contact.social]]
-		#	icon = "youtube"
-		#	link = "//www.youtube.com/DevTipsForDesigners"
+		[[params.contact.social]]
+			icon = "pinterest"
+			link = "https://www.pinterest.es/ebanisteriacordon/"
 
 		[[params.contact.social]]
 			icon = "linkedin"
-			link = "//www.linkedin.com/in/carlos-cordón-ezquerro-50804652"
+			link = "https://www.linkedin.com/in/ebanisteriacordon/"
 
 		[[params.contact.social]]
 			icon = "facebook"
-			link = "//www.linkedin.com/in/carlos-cordón-ezquerro-50804652"
+			link = "https://www.facebook.com/carlos.cordon.3726"
 
 
 	[params.form]
