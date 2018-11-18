@@ -16,7 +16,7 @@
     {{ range $i, $e := .Site.Data.clients.list }}
     <div class="client-unit {{ if eq $i 0 }}active-client{{ end }}">   <!-- CONDITIONAL CSS CLASS -->
         <a href="{{ .empresa_link }}"><figure class="client-face">
-            <img src="/img/proj/150-{{ .avatar }}.jpg" alt="client-face">
+	    {{ if eq .avatar nil }}{{else}}<img src="/img/proj/150-{{ .avatar }}.jpg" alt="client-face">{{end}}
             <figcaption>
                 <strong class="client-name">{{ .name }}</strong>
                 <em class="client-title">{{ .title }}</em>
